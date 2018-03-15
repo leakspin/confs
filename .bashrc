@@ -49,7 +49,6 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=1
 PROMPT_COMMAND='__git_ps1 "'$GY'['$Y'\u'$GY'@'$P'\h'$GY':'$B'\w'$GY']'$W'" "\\\$ "'
-#export PS1="$GY[$Y\u$GY@$P\h$GY:$B\w$GY]$W\$(get_prompt_symbol) "
 #}}}
 # CONFIG {{{
   export PATH=/usr/local/bin:$PATH
