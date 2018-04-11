@@ -30,7 +30,6 @@ dbu() { docker build -t=$1 .; }
 
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
-complete -F __docker_containers dbash
 
 ### Armaggedon
 removecontainers() {
@@ -53,3 +52,9 @@ alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 
 alias dcb="docker-compose build"
+
+alias dclocal="docker-compose -f docker-compose-local.yml"
+
+alias dcdev="docker-compose -f docker-compose-dev.yml"
+
+alias dcpro="docker-compose -f docker-compose-prod.yml"
