@@ -55,6 +55,15 @@ PROMPT_COMMAND='__git_ps1 "'$GY'['$Y'\u'$GY'@'$P'\h'$GY':'$B'\w'$GY']'$W'" "\\\$
   if [[ -d "$HOME/bin" ]] ; then
       PATH="$HOME/bin:$PATH"
   fi
+  if [[ -d "$HOME/.local/share/umake/bin" ]] ; then
+      PATH="$PATH:$HOME/.local/share/umake/bin"
+  fi
+  if [[ -d "$HOME/.composer/vendor/bin" ]] ; then
+      PATH="$PATH:$HOME/.composer/vendor/bin"
+  fi
+  if [[ -d "$HOME/.yarn/bin" ]] ; then
+      PATH="$PATH:$HOME/.yarn/bin"
+  fi
   # ANDROID SDK {{{
     if [[ -d "/opt/android-sdk" ]]; then
           export ANDROID_HOME=/opt/android-sdk

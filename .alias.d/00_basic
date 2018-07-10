@@ -5,6 +5,7 @@ alias lr='ls -R'
 alias ll='ls -alh'
 alias la='ll -A'
 alias lm='la | less'
+alias update='sudo apt update && sudo apt upgrade -y'
 
 extract() {
 	clrstart="\033[1;34m"  #color codes
