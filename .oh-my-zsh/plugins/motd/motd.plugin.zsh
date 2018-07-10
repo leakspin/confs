@@ -22,4 +22,7 @@ IP Addresses.......: `ip a | grep glo | grep -v docker | awk '{print $2}' | cut 
 Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|ES|SP013|MADRID" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
 $(tput sgr0)"
 
-fortune
+if [[ $(which fortune) != '' ]]
+then
+	fortune
+fi
