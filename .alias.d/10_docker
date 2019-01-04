@@ -25,11 +25,12 @@ dstop() { docker stop $(docker ps -a -q); }
 # Remove all containers
 drm() { docker rm $(docker ps -a -q); }
 
-# Dockerfile build, e.g., $dbu tcnksm/test 
+# Dockerfile build, e.g., $dbu tcnksm/test
 dbu() { docker build -t=$1 .; }
 
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+drbash() { docker exec -u root -it $(docker ps -aqf "name=$1") bash; }
 
 ### Armaggedon
 removecontainers() {
