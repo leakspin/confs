@@ -67,7 +67,6 @@ plugins=(
   git
   git-flow
   motd
-  nyan
   rsync
   sudo
   systemd
