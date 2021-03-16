@@ -61,6 +61,9 @@ fi
 if [[ -d "$HOME/.yarn/bin" ]] ; then
     PATH="$PATH:$HOME/.yarn/bin"
 fi
+if [[ -d "$HOME/.local/bin" ]] ; then
+    PATH="$PATH:$HOME/.local/bin"
+fi
 
 # ANDROID SDK
 if [[ -d "/opt/android-sdk" ]]; then
