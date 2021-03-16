@@ -37,6 +37,17 @@ if [ -f /usr/lib/bash-git-prompt/gitprompt.sh ]; then
     source /usr/lib/bash-git-prompt/gitprompt.sh
 fi
 
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    # To only show the git prompt in or under a repository directory
+    # GIT_PROMPT_ONLY_IN_REPO=1
+    # To use upstream's default theme
+    # GIT_PROMPT_THEME=Default
+    # To use upstream's default theme, modified by arch maintainer
+    # GIT_PROMPT_THEME=Default_Arch
+    GIT_PROMPT_THEME=Single_line
+    source "$HOME/.bash-git-prompt/gitprompt.sh"
+fi
+
 # CONFIG
 if [[ -d "$HOME/bin" ]] ; then
     PATH="$HOME/bin:$PATH"
