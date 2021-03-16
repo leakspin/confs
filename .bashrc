@@ -26,10 +26,16 @@ get_prompt_symbol() {
     [[ $UID == 0 ]] && echo "#" || echo "\$"
 }
 
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWCOLORHINTS=1
-PROMPT_COMMAND='__git_ps1 "'$GY'['$Y'\u'$GY'@'$P'\h'$GY':'$B'\w'$GY']'$W'" "\\\$ "'
+if [ -f /usr/lib/bash-git-prompt/gitprompt.sh ]; then
+    # To only show the git prompt in or under a repository directory
+    GIT_PROMPT_ONLY_IN_REPO=1
+    # To use upstream's default theme
+    # GIT_PROMPT_THEME=Default
+    # To use upstream's default theme, modified by arch maintainer
+    # GIT_PROMPT_THEME=Default_Arch
+    GIT_PROMPT_THEME=Minimal_UserHost
+    source /usr/lib/bash-git-prompt/gitprompt.sh
+fi
 
 # CONFIG
 if [[ -d "$HOME/bin" ]] ; then
