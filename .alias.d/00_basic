@@ -13,3 +13,4 @@ alias cddev='cd $HOME/dev'
 
 alias restart='sudo systemctl restart'
 alias status='sudo systemctl status'
+alias journalf='sudo journalctl -f -u'
