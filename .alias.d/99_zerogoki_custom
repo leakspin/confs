@@ -1,0 +1,7 @@
+if [[ $(cat /etc/hostname) == 'zerogoki' ]]
+then
+    alias a='cd /mnt/shogoki-a'
+    alias userdata='cd /mnt/shogoki-a/dietpi_userdata'
+    alias b='cd /mnt/shogoki-b'
+    alias c='cd /mnt/shogoki-c'
+fi

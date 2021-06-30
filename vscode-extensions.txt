@@ -1,9 +1,0 @@
-LeCrunchic.mariana-nord
-PeterJausovec.vscode-docker
-alefragnani.project-manager
-blzjns.vscode-raml
-felixfbecker.php-debug
-felixfbecker.php-intellisense
-jakebathman.mysql-syntax
-mikestead.dotenv
-yzhang.markdown-all-in-one
